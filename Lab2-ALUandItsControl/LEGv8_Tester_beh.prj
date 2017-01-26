@@ -1,0 +1,3 @@
+verilog work "LEGv8.v"
+verilog work "LEGv8_Tester.v"
+verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

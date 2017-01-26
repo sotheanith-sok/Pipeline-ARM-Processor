@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/Workspace/CECS-341/Lab2-ALUandItsControl/LEGv8_Tester_isim_beh.exe" -prj "D:/Workspace/CECS-341/Lab2-ALUandItsControl/LEGv8_Tester_beh.prj" "work.LEGv8_Tester" "work.glbl" 
