@@ -15,7 +15,7 @@ module LEGv8(ALU_Operation, A, B, ALU_Result, Zero);
 			6:ALU_Result<= A-B;
 			7: ALU_Result<= B;
 			12: ALU_Result<= ~(A|B);
-			default: ALU_Result <=0;
+			default: ALU_Result <=64'bx;
 		endcase
 	end
 endmodule

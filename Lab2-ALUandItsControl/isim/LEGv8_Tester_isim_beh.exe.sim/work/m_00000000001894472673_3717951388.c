@@ -29,6 +29,7 @@ static int ng4[] = {2, 0};
 static int ng5[] = {6, 0};
 static int ng6[] = {7, 0};
 static int ng7[] = {12, 0};
+static unsigned int ng8[] = {4294967295U, 4294967295U, 4294967295U, 4294967295U};
 
 
 
@@ -207,7 +208,7 @@ LAB16:    t2 = ((char*)((ng7)));
 LAB18:
 LAB20:
 LAB19:    xsi_set_current_line(18, ng0);
-    t2 = ((char*)((ng1)));
+    t2 = ((char*)((ng8)));
     t3 = (t0 + 1928);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 64, 0LL);
 
