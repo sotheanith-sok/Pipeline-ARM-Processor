@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\Workspace\CECS-341\Lab3-RFandALU\registerfile_Tester_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Workspace/CECS-341/Lab3-RFandALU/registerfile_Tester_isim_beh.wdb 
+Running: D:\Workspace\CECS-341\Lab3-RFandALU\RFandALU_Tester_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Workspace/CECS-341/Lab3-RFandALU/RFandALU_Tester_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,22 +8,16 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 550 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/registerfile_Tester.v" Line 84 
+Stopped at time : 100 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/RFandALU_Tester.v" Line 126 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 550 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/registerfile_Tester.v" Line 86 
+Stopped at time : 100 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/RFandALU_Tester.v" Line 126 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 550 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/registerfile_Tester.v" Line 86 
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 450 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/registerfile_Tester.v" Line 83 
+Stopped at time : 100 ns :  in File "D:/Workspace/CECS-341/Lab3-RFandALU/RFandALU_Tester.v" Line 128 
