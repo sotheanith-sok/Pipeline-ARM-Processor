@@ -31,13 +31,26 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RFandALU.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RFandALU.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RFandALU.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RFandALU_Tester_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RFandALU_Tester_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RFandALU_Tester_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="RFandALU_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RFandALU_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="RFandALU_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RFandALU_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RFandALUwithRTypeSupport.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RFandALUwithRTypeSupport.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RFandALUwithRTypeSupport.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="RFandALUwithRTypeSupport.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RFandALUwithRTypeSupport.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RFandALUwithRTypeSupport.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RFandALUwithRTypeSupport.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RFandALUwithRTypeSupport.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RFandALUwithRTypeSupport_Tester_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RFandALUwithRTypeSupport_Tester_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RFandALUwithRTypeSupport_Tester_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RFandALUwithRTypeSupport_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RFandALUwithRTypeSupport_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RFandALUwithRTypeSupport_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RFandALUwithRTypeSupport_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -52,11 +65,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1486600534" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486600534" xil_pn:in_ck="5150010015788973972" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:in_ck="-5250589836257530522" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -68,22 +81,24 @@
       <outfile xil_pn:name="LEGv8.v"/>
       <outfile xil_pn:name="RFandALU.v"/>
       <outfile xil_pn:name="RFandALU_Tester.v"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.v"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester.v"/>
       <outfile xil_pn:name="registerfile.v"/>
       <outfile xil_pn:name="registerfile_Tester.v"/>
     </transform>
-    <transform xil_pn:end_ts="1486600534" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3835289916806412442" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6263585762495563993" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486600534" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3265640935025826980" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5256448982768602327" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486600534" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8294760025956975181" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1821372186021111974" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486600534" xil_pn:in_ck="5150010015788973972" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033451" xil_pn:in_ck="-5250589836257530522" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -96,10 +111,12 @@
       <outfile xil_pn:name="LEGv8.v"/>
       <outfile xil_pn:name="RFandALU.v"/>
       <outfile xil_pn:name="RFandALU_Tester.v"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.v"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester.v"/>
       <outfile xil_pn:name="registerfile.v"/>
       <outfile xil_pn:name="registerfile_Tester.v"/>
     </transform>
-    <transform xil_pn:end_ts="1486600537" xil_pn:in_ck="5150010015788973972" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1187911324578962869" xil_pn:start_ts="1486600534">
+    <transform xil_pn:end_ts="1487033453" xil_pn:in_ck="-5250589836257530522" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5188743454606250641" xil_pn:start_ts="1487033451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -107,62 +124,63 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RFandALU_Tester_beh.prj"/>
-      <outfile xil_pn:name="RFandALU_Tester_isim_beh.exe"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester_beh.prj"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1486600537" xil_pn:in_ck="-1900852586527652104" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6382171738379818680" xil_pn:start_ts="1486600537">
+    <transform xil_pn:end_ts="1487033454" xil_pn:in_ck="1384602340626438144" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2286824693370823534" xil_pn:start_ts="1487033453">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RFandALU_Tester_isim_beh.wdb"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>
-    <transform xil_pn:end_ts="1486591937" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1486591937">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591937" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1729107314691253274" xil_pn:start_ts="1486591937">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8490764858969861357" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591937" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8294760025956975181" xil_pn:start_ts="1486591937">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1821372186021111974" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591938" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1486591937">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591938" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="327690562938569892" xil_pn:start_ts="1486591938">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4621168054026909649" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591938" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1486591938">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486591938" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8208765932675752105" xil_pn:start_ts="1486591938">
+    <transform xil_pn:end_ts="1487033852" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="9193494813143353444" xil_pn:start_ts="1487033852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1486602279" xil_pn:in_ck="6207847308051550574" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5742096645225160960" xil_pn:start_ts="1486602268">
+    <transform xil_pn:end_ts="1487034136" xil_pn:in_ck="5755365849536020108" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4996471292338118131" xil_pn:start_ts="1487034126">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="RFandALU.lso"/>
-      <outfile xil_pn:name="RFandALU.ngc"/>
-      <outfile xil_pn:name="RFandALU.ngr"/>
-      <outfile xil_pn:name="RFandALU.prj"/>
-      <outfile xil_pn:name="RFandALU.stx"/>
-      <outfile xil_pn:name="RFandALU.syr"/>
-      <outfile xil_pn:name="RFandALU.xst"/>
-      <outfile xil_pn:name="RFandALU_Tester_beh.prj"/>
-      <outfile xil_pn:name="RFandALU_xst.xrpt"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.lso"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.ngc"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.ngr"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.prj"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.stx"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.syr"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport.xst"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_Tester_beh.prj"/>
+      <outfile xil_pn:name="RFandALUwithRTypeSupport_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
