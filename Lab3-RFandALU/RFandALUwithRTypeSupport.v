@@ -11,7 +11,8 @@ module RFandALUwithRTypeSupport(Read1, Read2, WriteReg, WriteData, RegWrite, clo
 	wire [63:0] A, B;
 
 	ALUwithControl Lab2 (.ALUOp(ALUOp), .Opcode(Opcode), .A(A), .B(B), .Zero(Zero), .ALU_Result(ALU_Result));
-	registerfile 	Lab3a (.Read1(Read1), .Read2(Read2), .WriteReg(WriteReg), .WriteData(ALU_Result), .RegWrite(RegWrite), .clock(clock), .Data1(A), .Data2(B));
+	registerfile 	Lab3a (.Read1(Read1), .Read2(Read2), .WriteReg(WriteReg), .WriteData(WriteData), .RegWrite(RegWrite), .clock(clock), .Data1(A), .Data2(B));
+	
 	
 endmodule
 	

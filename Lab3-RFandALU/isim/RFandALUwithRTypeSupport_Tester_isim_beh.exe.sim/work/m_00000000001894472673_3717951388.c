@@ -467,6 +467,6 @@ LAB38:    t13 = (t11 * 8);
 extern void work_m_00000000001894472673_3717951388_init()
 {
 	static char *pe[] = {(void *)Cont_8_0,(void *)Always_9_1};
-	xsi_register_didat("work_m_00000000001894472673_3717951388", "isim/RFandALUwithRTypeSupport_Tester_isim_beh.exe.sim/work/m_00000000001894472673_3717951388.didat");
+	xsi_register_didat("work_m_00000000001894472673_3717951388", "isim/RFandALUwithRTypeSupport_tester_isim_beh.exe.sim/work/m_00000000001894472673_3717951388.didat");
 	xsi_register_executes(pe);
 }

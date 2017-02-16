@@ -156,6 +156,6 @@ LAB17:    xsi_set_current_line(16, ng0);
 extern void work_m_00000000004013222299_4231019343_init()
 {
 	static char *pe[] = {(void *)Always_8_0};
-	xsi_register_didat("work_m_00000000004013222299_4231019343", "isim/RFandALUwithRTypeSupport_Tester_isim_beh.exe.sim/work/m_00000000004013222299_4231019343.didat");
+	xsi_register_didat("work_m_00000000004013222299_4231019343", "isim/RFandALUwithRTypeSupport_tester_isim_beh.exe.sim/work/m_00000000004013222299_4231019343.didat");
 	xsi_register_executes(pe);
 }

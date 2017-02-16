@@ -188,7 +188,7 @@ Unit <ALUwithControl> synthesized.
 
 Synthesizing Unit <RFandALUwithRTypeSupport>.
     Related source file is "RFandALUwithRTypeSupport.v".
-WARNING:Xst:647 - Input <WriteData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <C> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <RFandALUwithRTypeSupport> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -269,7 +269,7 @@ Optimizing unit <LEGv8> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block RFandALUwithRTypeSupport, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block RFandALUwithRTypeSupport, actual ratio is 10.
 
 Final Macro Processing ...
 
@@ -304,14 +304,11 @@ Design Statistics
 # IOs                              : 159
 
 Cell Usage :
-# BELS                             : 722
+# BELS                             : 689
 #      GND                         : 1
-#      LUT2                        : 45
-#      LUT3                        : 144
-#      LUT3_D                      : 41
-#      LUT4                        : 254
-#      LUT4_D                      : 4
-#      LUT4_L                      : 88
+#      LUT2                        : 69
+#      LUT3                        : 194
+#      LUT4                        : 280
 #      MUXCY                       : 79
 #      MUXF5                       : 1
 #      VCC                         : 1
@@ -320,8 +317,8 @@ Cell Usage :
 #      RAM16X1D                    : 256
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 87
-#      IBUF                        : 22
+# IO Buffers                       : 151
+#      IBUF                        : 86
 #      OBUF                        : 65
 =========================================================================
 
@@ -330,12 +327,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      464  out of   4656     9%  
- Number of 4 input LUTs:               1088  out of   9312    11%  
-    Number used as logic:               576
+ Number of Slices:                      474  out of   4656    10%  
+ Number of 4 input LUTs:               1055  out of   9312    11%  
+    Number used as logic:               543
     Number used as RAMs:                512
  Number of IOs:                         159
- Number of bonded IOBs:                  88  out of    232    37%  
+ Number of bonded IOBs:                 152  out of    232    65%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -370,197 +367,40 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 9.385ns (Maximum Frequency: 106.549MHz)
-   Minimum input arrival time before clock: 14.256ns
-   Maximum output required time after clock: 14.515ns
-   Maximum combinational path delay: 19.385ns
+   Minimum period: No path found
+   Minimum input arrival time before clock: 3.690ns
+   Maximum output required time after clock: 15.486ns
+   Maximum combinational path delay: 18.741ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 9.385ns (frequency: 106.549MHz)
-  Total number of paths / destination ports: 51840 / 256
--------------------------------------------------------------------------
-Delay:               9.385ns (Levels of Logic = 67)
-  Source:            Lab3a/Mram_RF1 (RAM)
-  Destination:       Lab3a/Mram_RF127 (RAM)
-  Source Clock:      clock rising
-  Destination Clock: clock rising
-
-  Data Path: Lab3a/Mram_RF1 to Lab3a/Mram_RF127
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAM16X1D:WCLK->DPO    1   1.654   0.426  Lab3a/Mram_RF1 (N5)
-     LUT3:I1->O            3   0.612   0.481  inst_LPM_MUX1281 (A<0>)
-     LUT3:I2->O            1   0.612   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
-     MUXCY:CI->O           0   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
-     XORCY:CI->O           1   0.699   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_xor<63> (Lab2/Lab1a/ALU_Result_addsub0000<63>)
-     LUT4:I3->O            6   0.612   0.000  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
-     RAM16X1D:D                0.332          Lab3a/Mram_RF127
-    ----------------------------------------
-    Total                      9.385ns (8.118ns logic, 1.267ns route)
-                                       (86.5% logic, 13.5% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 532320 / 2560
+  Total number of paths / destination ports: 2816 / 2560
 -------------------------------------------------------------------------
-Offset:              14.256ns (Levels of Logic = 71)
-  Source:            Opcode<3> (PAD)
-  Destination:       Lab3a/Mram_RF127 (RAM)
+Offset:              3.690ns (Levels of Logic = 2)
+  Source:            RegWrite (PAD)
+  Destination:       Lab3a/Mram_RF_ren1 (RAM)
   Destination Clock: clock rising
 
-  Data Path: Opcode<3> to Lab3a/Mram_RF127
+  Data Path: RegWrite to Lab3a/Mram_RF_ren1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            29   1.106   1.224  Opcode_3_IBUF (Opcode_3_IBUF)
-     LUT4:I0->O            1   0.612   0.000  Lab2/Lab2b/ALU_Operation<2>28_F (N2291)
-     MUXF5:I0->O           1   0.278   0.426  Lab2/Lab2b/ALU_Operation<2>28 (Lab2/Lab2b/ALU_Operation<2>28)
-     LUT2:I1->O          130   0.612   1.102  Lab2/Lab2b/ALU_Operation<2>36 (Lab2/ALU_Operation<2>)
-     LUT4:I3->O           65   0.612   1.151  Lab2/Lab1a/ALU_Result_mux00002 (Lab2/Lab1a/ALU_Result_mux0000)
-     LUT4:I1->O            1   0.612   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1>_SW0 (N372)
-     LUT4:I3->O            1   0.612   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
-     MUXCY:CI->O           0   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
-     XORCY:CI->O           1   0.699   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_xor<63> (Lab2/Lab1a/ALU_Result_addsub0000<63>)
-     LUT4:I3->O            6   0.612   0.000  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
-     RAM16X1D:D                0.332          Lab3a/Mram_RF127
+     IBUF:I->O             2   1.106   0.532  RegWrite_IBUF (RegWrite_IBUF)
+     LUT2:I0->O          128   0.612   1.099  write_ctrl (write_ctrl)
+     RAM16X1D:WE               0.341          Lab3a/Mram_RF_ren1
     ----------------------------------------
-    Total                     14.256ns (9.633ns logic, 4.623ns route)
-                                       (67.6% logic, 32.4% route)
+    Total                      3.690ns (2.059ns logic, 1.631ns route)
+                                       (55.8% logic, 44.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 25920 / 65
+  Total number of paths / destination ports: 25728 / 65
 -------------------------------------------------------------------------
-Offset:              14.515ns (Levels of Logic = 70)
+Offset:              15.486ns (Levels of Logic = 71)
   Source:            Lab3a/Mram_RF1 (RAM)
   Destination:       Zero (PAD)
   Source Clock:      clock rising
@@ -569,8 +409,99 @@ Offset:              14.515ns (Levels of Logic = 70)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAM16X1D:WCLK->DPO    1   1.654   0.426  Lab3a/Mram_RF1 (N5)
-     LUT3:I1->O            3   0.612   0.481  inst_LPM_MUX1281 (A<0>)
+     RAM16X1D:WCLK->DPO    1   1.654   0.426  Lab3a/Mram_RF1 (N263)
+     LUT3:I1->O            3   0.612   0.603  inst_LPM_MUX6411 (A<0>)
+     LUT3:I0->O            1   0.612   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
+     MUXCY:CI->O           0   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
+     XORCY:CI->O           1   0.699   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_xor<63> (Lab2/Lab1a/ALU_Result_addsub0000<63>)
+     LUT4:I3->O            1   0.612   0.426  Lab2/Lab1a/ALU_Result<63>48 (Lab2/Lab1a/ALU_Result<63>48)
+     LUT2:I1->O            2   0.612   0.383  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
+     LUT4:I3->O            1   0.612   0.000  Lab2/Lab1a/Mcompar_Zero_lut<15> (Lab2/Lab1a/Mcompar_Zero_lut<15>)
+     MUXCY:S->O            1   0.752   0.357  Lab2/Lab1a/Mcompar_Zero_cy<15> (Zero_OBUF)
+     OBUF:I->O                 3.169          Zero_OBUF (Zero)
+    ----------------------------------------
+    Total                     15.486ns (12.931ns logic, 2.555ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 262528 / 65
+-------------------------------------------------------------------------
+Delay:               18.741ns (Levels of Logic = 75)
+  Source:            Opcode<3> (PAD)
+  Destination:       Zero (PAD)
+
+  Data Path: Opcode<3> to Zero
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.690  Opcode_3_IBUF (Opcode_3_IBUF)
+     LUT4:I0->O            1   0.612   0.000  Lab2/Lab2b/ALU_Operation<2>28_F (N1391)
+     MUXF5:I0->O           1   0.278   0.426  Lab2/Lab2b/ALU_Operation<2>28 (Lab2/Lab2b/ALU_Operation<2>28)
+     LUT2:I1->O          130   0.612   1.102  Lab2/Lab2b/ALU_Operation<2>36 (Lab2/ALU_Operation<2>)
+     LUT4:I3->O           65   0.612   1.112  Lab2/Lab1a/ALU_Result_mux00002 (Lab2/Lab1a/ALU_Result_mux0000)
      LUT3:I2->O            1   0.612   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1>)
@@ -618,131 +549,42 @@ Offset:              14.515ns (Levels of Logic = 70)
      MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43>)
      MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44>)
      MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
-     MUXCY:CI->O           0   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
+     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
+     MUXCY:CI->O           0   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
      XORCY:CI->O           1   0.699   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_xor<63> (Lab2/Lab1a/ALU_Result_addsub0000<63>)
-     LUT4:I3->O            6   0.612   0.572  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
+     LUT4:I3->O            1   0.612   0.426  Lab2/Lab1a/ALU_Result<63>48 (Lab2/Lab1a/ALU_Result<63>48)
+     LUT2:I1->O            2   0.612   0.383  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
      LUT4:I3->O            1   0.612   0.000  Lab2/Lab1a/Mcompar_Zero_lut<15> (Lab2/Lab1a/Mcompar_Zero_lut<15>)
      MUXCY:S->O            1   0.752   0.357  Lab2/Lab1a/Mcompar_Zero_cy<15> (Zero_OBUF)
      OBUF:I->O                 3.169          Zero_OBUF (Zero)
     ----------------------------------------
-    Total                     14.515ns (12.319ns logic, 2.196ns route)
-                                       (84.9% logic, 15.1% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 264880 / 65
--------------------------------------------------------------------------
-Delay:               19.385ns (Levels of Logic = 74)
-  Source:            Opcode<3> (PAD)
-  Destination:       Zero (PAD)
-
-  Data Path: Opcode<3> to Zero
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            29   1.106   1.224  Opcode_3_IBUF (Opcode_3_IBUF)
-     LUT4:I0->O            1   0.612   0.000  Lab2/Lab2b/ALU_Operation<2>28_F (N2291)
-     MUXF5:I0->O           1   0.278   0.426  Lab2/Lab2b/ALU_Operation<2>28 (Lab2/Lab2b/ALU_Operation<2>28)
-     LUT2:I1->O          130   0.612   1.102  Lab2/Lab2b/ALU_Operation<2>36 (Lab2/ALU_Operation<2>)
-     LUT4:I3->O           65   0.612   1.151  Lab2/Lab1a/ALU_Result_mux00002 (Lab2/Lab1a/ALU_Result_mux0000)
-     LUT4:I1->O            1   0.612   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1>_SW0 (N372)
-     LUT4:I3->O            1   0.612   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<29>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<30>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<31>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<32>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<33>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<34>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<35>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<36>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<37>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<38>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<39>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<40>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<41>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<42>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<43>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<44>)
-     MUXCY:CI->O           1   0.052   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<45>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<46>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<47>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<48>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<49>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<50>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<51>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<52>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<53>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<54>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<55>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<56>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<57>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<58>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<59>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<60>)
-     MUXCY:CI->O           1   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<61>)
-     MUXCY:CI->O           0   0.051   0.000  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62> (Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_cy<62>)
-     XORCY:CI->O           1   0.699   0.360  Lab2/Lab1a/Maddsub_ALU_Result_addsub0000_xor<63> (Lab2/Lab1a/ALU_Result_addsub0000<63>)
-     LUT4:I3->O            6   0.612   0.572  Lab2/Lab1a/ALU_Result<63>57 (ALU_Result_63_OBUF)
-     LUT4:I3->O            1   0.612   0.000  Lab2/Lab1a/Mcompar_Zero_lut<15> (Lab2/Lab1a/Mcompar_Zero_lut<15>)
-     MUXCY:S->O            1   0.752   0.357  Lab2/Lab1a/Mcompar_Zero_cy<15> (Zero_OBUF)
-     OBUF:I->O                 3.169          Zero_OBUF (Zero)
-    ----------------------------------------
-    Total                     19.385ns (13.834ns logic, 5.552ns route)
-                                       (71.4% logic, 28.6% route)
+    Total                     18.741ns (13.885ns logic, 4.856ns route)
+                                       (74.1% logic, 25.9% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.12 secs
+Total CPU time to Xst completion: 7.61 secs
  
 --> 
 
-Total memory usage is 316404 kilobytes
+Total memory usage is 315380 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

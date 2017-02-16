@@ -27,5 +27,5 @@
 
 extern void work_m_00000000003602615342_3671930607_init()
 {
-	xsi_register_didat("work_m_00000000003602615342_3671930607", "isim/RFandALUwithRTypeSupport_Tester_isim_beh.exe.sim/work/m_00000000003602615342_3671930607.didat");
+	xsi_register_didat("work_m_00000000003602615342_3671930607", "isim/RFandALUwithRTypeSupport_tester_isim_beh.exe.sim/work/m_00000000003602615342_3671930607.didat");
 }

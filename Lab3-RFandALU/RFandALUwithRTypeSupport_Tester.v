@@ -1,6 +1,28 @@
 `timescale 1ns / 1ps
 
-module RFandALUwithRTypeSupport_Tester;
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   16:35:29 02/15/2017
+// Design Name:   RFandALUwithRTypeSupport
+// Module Name:   D:/Workspace/CECS-341/Lab3-RFandALU/RFandALUwithRTypeSupport_tester.v
+// Project Name:  Lab3-RFandALU
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: RFandALUwithRTypeSupport
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module RFandALUwithRTypeSupport_tester;
 
 	// Inputs
 	reg [4:0] Read1;
@@ -32,14 +54,15 @@ module RFandALUwithRTypeSupport_Tester;
 
 	initial begin
 		// Initialize Inputs
-		Read1 = 5;
-		Read2 = 10;
+		Read1 = 0;
+		Read2 = 0;
 		WriteReg = 0;
 		WriteData = 0;
 		RegWrite = 0;
 		clock = 0;
 		ALUOp = 0;
 		Opcode = 0;
+
 
 		#5;
 		WriteReg=5;
@@ -48,8 +71,8 @@ module RFandALUwithRTypeSupport_Tester;
 		#5;
 		clock=1;
 		#10;
-		clock=0;
 		RegWrite=0;
+		clock=0;
 		
 		#5;
 		WriteReg=10;
@@ -58,18 +81,61 @@ module RFandALUwithRTypeSupport_Tester;
 		#5;
 		clock=1;
 		#10;
-		clock=0;
 		RegWrite=0;
+		clock=0;
+		
+		Read1=5;
+		Read2=10;		
 		
 		#5;
-		Read2=5;
-		{ALUOp, Opcode}=13'b10_11111000010;
-		#15;
+		WriteReg=1;
+		RegWrite=1;
+		{ALUOp, Opcode}=13'b10_10001010000;
+		#2;
+		WriteData=ALU_Result;
+		#3;
+		clock=1;
+		#10;
+		RegWrite=0;
+		clock=0;
 		
+		#5;
+		WriteReg=2;
+		RegWrite=1;
+		{ALUOp, Opcode}=13'b10_10101010000;
+		#2;
+		WriteData=ALU_Result;
+		#3;
+		clock=1;
+		#10;
+		RegWrite=0;
+		clock=0;
+		
+		#5;
+		WriteReg=3;
+		RegWrite=1;
+		{ALUOp, Opcode}=13'b10_10001011000;
+		#2;
+		WriteData=ALU_Result;
+		#3;
+		clock=1;
+		#10;
+		RegWrite=0;
+		clock=0;
+		
+		#5;
+		WriteReg=4;
+		RegWrite=1;
+		{ALUOp, Opcode}=13'b10_11001011000;
+		#2;
+		WriteData=ALU_Result;
+		#3;
+		clock=1;
+		#10;
+		RegWrite=0;
+		clock=0;
 		
 		$stop;
-        
-
 	end
       
 endmodule

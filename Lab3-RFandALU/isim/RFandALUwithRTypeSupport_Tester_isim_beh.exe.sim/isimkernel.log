@@ -1,15 +1,15 @@
 Command line:
-   RFandALUwithRTypeSupport_Tester_isim_beh.exe
+   RFandALUwithRTypeSupport_tester_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51562
+     -socket  51809
 
-Mon Feb 13 17:03:24 2017
+Wed Feb 15 16:56:55 2017
 
 
  Elaboration Time: 0.078125 sec
 
- Current Memory Usage: 850.293 Meg
+ Current Memory Usage: 850.268 Meg
 
  Total Signals          : 48
  Total Nets             : 304
@@ -20,9 +20,9 @@ Mon Feb 13 17:03:24 2017
  Total Traceable Variables  : 29
  Total Scalar Nets and Variables : 2594
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 1322.15 Meg
+ Current Memory Usage: 850.268 Meg
 
-Mon Feb 13 23:56:07 2017
+Thu Feb 16 09:57:10 2017
 
