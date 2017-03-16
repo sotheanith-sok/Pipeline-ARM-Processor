@@ -2,27 +2,27 @@ Command line:
    Top4B_Tester_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60738
+     -socket  52581
 
-Wed Mar 01 16:15:58 2017
+Mon Mar 13 16:57:40 2017
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 846.25 Meg
+ Current Memory Usage: 859.152 Meg
 
  Total Signals          : 68
  Total Nets             : 573
  Total Signal Drivers   : 26
  Total Blocks           : 11
  Total Primitive Blocks : 8
- Total Processes        : 36
+ Total Processes        : 37
  Total Traceable Variables  : 37
  Total Scalar Nets and Variables : 4812
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.125 sec
 
- Current Memory Usage: 531.677 Meg
+ Current Memory Usage: 544.58 Meg
 
-Wed Mar 01 16:42:00 2017
+Tue Mar 14 10:06:05 2017
 
