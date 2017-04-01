@@ -33,7 +33,7 @@ module InstructionDecoder( Reg2Loc, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrit
 			end
 			
 			//Add
-			11'b10101011000: begin
+			11'b10001011000: begin
 			Reg2Loc<=0; ALUSrc<=0; MemtoReg<=0;
 			RegWrite<=1; MemRead<=0; MemWrite<=0; Branch<=0; ALUOp<=2;
 			end

@@ -30,12 +30,12 @@ module InstructionMemory(Address, out);
 			IM[14]=8'h00;
 			IM[15]=8'hA2;
 			//Add $3, $5, $10
-			IM[16]=8'hAB;
+			IM[16]=8'h8B;
 			IM[17]=8'h0A;
 			IM[18]=8'h00;
 			IM[19]=8'hA3;
 			//Sub $4, $5, $10
-			IM[20]=8'hEB;
+			IM[20]=8'hCB;
 			IM[21]=8'h0A;
 			IM[22]=8'h00;
 			IM[23]=8'hA3;
