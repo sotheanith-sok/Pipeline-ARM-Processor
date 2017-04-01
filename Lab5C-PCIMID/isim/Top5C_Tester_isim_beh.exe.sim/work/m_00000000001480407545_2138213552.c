@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Workspace/CECS-341/Lab5C-PCIMID/InstructionMemory.v";
+static const char *ng0 = "D:/Workstation/CECS-341/Lab5C-PCIMID/InstructionMemory.v";
 static int ng1[] = {3, 0, 0, 0};
 static int ng2[] = {2, 0, 0, 0};
 static int ng3[] = {1, 0, 0, 0};
@@ -77,12 +77,13 @@ static int ng52[] = {31, 0};
 static int ng53[] = {32, 0};
 static int ng54[] = {33, 0};
 static int ng55[] = {34, 0};
-static int ng56[] = {35, 0};
-static int ng57[] = {36, 0};
-static int ng58[] = {37, 0};
-static int ng59[] = {38, 0};
-static unsigned int ng60[] = {4U, 0U};
-static int ng61[] = {39, 0};
+static unsigned int ng56[] = {3U, 0U};
+static int ng57[] = {35, 0};
+static int ng58[] = {36, 0};
+static int ng59[] = {37, 0};
+static int ng60[] = {38, 0};
+static unsigned int ng61[] = {4U, 0U};
+static int ng62[] = {39, 0};
 
 
 
@@ -990,7 +991,7 @@ LAB70:    xsi_set_current_line(55, ng0);
         goto LAB71;
 
 LAB72:    xsi_set_current_line(56, ng0);
-    t1 = ((char*)((ng51)));
+    t1 = ((char*)((ng56)));
     t2 = (t0 + 1608);
     t5 = (t0 + 1608);
     t6 = (t5 + 72U);
@@ -998,7 +999,7 @@ LAB72:    xsi_set_current_line(56, ng0);
     t8 = (t0 + 1608);
     t9 = (t8 + 64U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng56)));
+    t11 = ((char*)((ng57)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -1019,7 +1020,7 @@ LAB74:    xsi_set_current_line(58, ng0);
     t8 = (t0 + 1608);
     t9 = (t8 + 64U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng57)));
+    t11 = ((char*)((ng58)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -1040,7 +1041,7 @@ LAB76:    xsi_set_current_line(59, ng0);
     t8 = (t0 + 1608);
     t9 = (t8 + 64U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng58)));
+    t11 = ((char*)((ng59)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -1061,7 +1062,7 @@ LAB78:    xsi_set_current_line(60, ng0);
     t8 = (t0 + 1608);
     t9 = (t8 + 64U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng59)));
+    t11 = ((char*)((ng60)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -1074,7 +1075,7 @@ LAB78:    xsi_set_current_line(60, ng0);
         goto LAB79;
 
 LAB80:    xsi_set_current_line(61, ng0);
-    t1 = ((char*)((ng60)));
+    t1 = ((char*)((ng61)));
     t2 = (t0 + 1608);
     t5 = (t0 + 1608);
     t6 = (t5 + 72U);
@@ -1082,7 +1083,7 @@ LAB80:    xsi_set_current_line(61, ng0);
     t8 = (t0 + 1608);
     t9 = (t8 + 64U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng61)));
+    t11 = ((char*)((ng62)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
