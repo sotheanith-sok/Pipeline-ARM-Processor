@@ -20,7 +20,7 @@ module InstructionMemory(Address, out);
 			IM[6]=8'h00;
 			IM[7]=8'h0A;
 			//AND $1, $5, $10
-			IM[8]=8'hEA;
+			IM[8]=8'h8A;
 			IM[9]=8'h0A;
 			IM[10]=8'h00;
 			IM[11]=8'hA1;
@@ -53,7 +53,7 @@ module InstructionMemory(Address, out);
 			IM[32]=8'hF8;
 			IM[33]=8'h01;
 			IM[34]=8'h80;
-			IM[35]=8'h02;
+			IM[35]=8'h03;
 			//Store 4: Store to address 32 from $4
 			IM[36]=8'hF8;
 			IM[37]=8'h02;
