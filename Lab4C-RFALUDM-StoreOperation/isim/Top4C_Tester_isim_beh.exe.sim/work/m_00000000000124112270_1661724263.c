@@ -21,8 +21,10 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Workspace/CECS-341/Lab4C-RFALUDM-StoreOperation/registerfile.v";
+static const char *ng0 = "D:/Workstation/CECS-341/Lab4C-RFALUDM-StoreOperation/registerfile.v";
 static int ng1[] = {1, 0};
+static int ng2[] = {0, 0, 0, 0};
+static int ng3[] = {0, 0};
 
 
 
@@ -67,14 +69,14 @@ LAB2:    xsi_set_current_line(9, ng0);
     t12 = (t0 + 1048U);
     t13 = *((char **)t12);
     xsi_vlog_generic_get_array_select_value(t5, 64, t4, t8, t11, 2, 1, t13, 5, 2);
-    t12 = (t0 + 4416);
+    t12 = (t0 + 4664);
     t14 = (t12 + 56U);
     t15 = *((char **)t14);
     t16 = (t15 + 56U);
     t17 = *((char **)t16);
     xsi_vlog_bit_copy(t17, 0, t5, 0, 64);
     xsi_driver_vfirst_trans(t12, 0, 63);
-    t18 = (t0 + 4304);
+    t18 = (t0 + 4552);
     *((int *)t18) = 1;
 
 LAB1:    return;
@@ -121,14 +123,14 @@ LAB2:    xsi_set_current_line(10, ng0);
     t12 = (t0 + 1208U);
     t13 = *((char **)t12);
     xsi_vlog_generic_get_array_select_value(t5, 64, t4, t8, t11, 2, 1, t13, 5, 2);
-    t12 = (t0 + 4480);
+    t12 = (t0 + 4728);
     t14 = (t12 + 56U);
     t15 = *((char **)t14);
     t16 = (t15 + 56U);
     t17 = *((char **)t16);
     xsi_vlog_bit_copy(t17, 0, t5, 0, 64);
     xsi_driver_vfirst_trans(t12, 0, 63);
-    t18 = (t0 + 4320);
+    t18 = (t0 + 4568);
     *((int *)t18) = 1;
 
 LAB1:    return;
@@ -194,7 +196,7 @@ LAB0:    t1 = (t0 + 3984U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(12, ng0);
-    t2 = (t0 + 4336);
+    t2 = (t0 + 4584);
     *((int *)t2) = 1;
     t3 = (t0 + 4016);
     *((char **)t3) = t2;
@@ -279,10 +281,67 @@ LAB12:    t46 = *((unsigned int *)t30);
 
 }
 
+static void Initial_15_3(char *t0)
+{
+    char t3[8];
+    char t4[8];
+    char *t1;
+    char *t2;
+    char *t5;
+    char *t6;
+    char *t7;
+    char *t8;
+    char *t9;
+    char *t10;
+    char *t11;
+    char *t12;
+    unsigned int t13;
+    int t14;
+    char *t15;
+    unsigned int t16;
+    int t17;
+    int t18;
+    unsigned int t19;
+    unsigned int t20;
+    int t21;
+    int t22;
+
+LAB0:    xsi_set_current_line(16, ng0);
+    t1 = ((char*)((ng2)));
+    t2 = (t0 + 2568);
+    t5 = (t0 + 2568);
+    t6 = (t5 + 72U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 2568);
+    t9 = (t8 + 64U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng3)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB2;
+
+LAB3:
+LAB1:    return;
+LAB2:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB3;
+
+}
+
 
 extern void work_m_00000000000124112270_1661724263_init()
 {
-	static char *pe[] = {(void *)Cont_9_0,(void *)Cont_10_1,(void *)Always_12_2};
+	static char *pe[] = {(void *)Cont_9_0,(void *)Cont_10_1,(void *)Always_12_2,(void *)Initial_15_3};
 	xsi_register_didat("work_m_00000000000124112270_1661724263", "isim/Top4C_Tester_isim_beh.exe.sim/work/m_00000000000124112270_1661724263.didat");
 	xsi_register_executes(pe);
 }

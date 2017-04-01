@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-08T13:21:08</DateModified>
+  <DateModified>2017-03-31T17:20:19</DateModified>
   <ModuleName>Top4C</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Workspace/CECS-341/Lab4C-RFALUDM-StoreOperation/iseconfig/Top4C.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Workspace/CECS-341/Lab4C-RFALUDM-StoreOperation\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Workstation/CECS-341/Lab4C-RFALUDM-StoreOperation/iseconfig/Top4C.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Workstation/CECS-341/Lab4C-RFALUDM-StoreOperation\</ImplementationReportsDirectory>
   <DateInitialized>2017-03-01T16:42:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

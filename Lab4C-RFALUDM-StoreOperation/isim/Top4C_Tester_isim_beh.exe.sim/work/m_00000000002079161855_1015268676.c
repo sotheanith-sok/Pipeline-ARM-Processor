@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Workspace/CECS-341/Lab4C-RFALUDM-StoreOperation/SignedExtender.v";
+static const char *ng0 = "D:/Workstation/CECS-341/Lab4C-RFALUDM-StoreOperation/SignedExtender.v";
 static int ng1[] = {55, 0};
 
 

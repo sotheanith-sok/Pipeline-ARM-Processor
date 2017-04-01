@@ -155,7 +155,8 @@ module Top4C_Tester;
 		#5
 		Reg2Loc=1;
 		Rt=1;
-		{ALUOp,Opcode}=13'b10_11111000010;
+		Rn=0;
+		{ALUOp,Opcode}=13'b10_10001011000;
 		BaseAddress=9'b1000;
 		ALUSrc=1;
 		#2;
