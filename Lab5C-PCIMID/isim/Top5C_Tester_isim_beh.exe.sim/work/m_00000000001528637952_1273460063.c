@@ -26,10 +26,10 @@ static unsigned int ng1[] = {1986U, 0U};
 static int ng2[] = {0, 0};
 static int ng3[] = {1, 0};
 static unsigned int ng4[] = {1984U, 0U};
-static unsigned int ng5[] = {1872U, 0U};
+static unsigned int ng5[] = {1104U, 0U};
 static int ng6[] = {2, 0};
 static unsigned int ng7[] = {1360U, 0U};
-static unsigned int ng8[] = {1368U, 0U};
+static unsigned int ng8[] = {1112U, 0U};
 static unsigned int ng9[] = {1624U, 0U};
 
 
