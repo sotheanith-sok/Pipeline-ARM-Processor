@@ -10,54 +10,24 @@ module InstructionMemory(Address, out);
 	initial 
 		begin
 			//Load 1:Load from address 40 into $5
-			IM[0]=8'hF8;
-			IM[1]=8'h42;
-			IM[2]=8'h80;
-			IM[3]=8'h05;
+			{IM[0],IM[1],IM[2],IM[3]}=32'hF8428005;
 			//Load 2:Load from address 80 into $10
-			IM[4]=8'hF8;
-			IM[5]=8'h45;
-			IM[6]=8'h00;
-			IM[7]=8'h0A;
+			{IM[4],IM[5],IM[6],IM[7]}=32'hF845000A;
 			//AND $1, $5, $10
-			IM[8]=8'h8A;
-			IM[9]=8'h0A;
-			IM[10]=8'h00;
-			IM[11]=8'hA1;
+			{IM[8],IM[9],IM[10],IM[11]}=32'h8A0A00A1;
 			//Or	$2, $5, $10
-			IM[12]=8'hAA;
-			IM[13]=8'h0A;
-			IM[14]=8'h00;
-			IM[15]=8'hA2;
+			{IM[12],IM[13],IM[14],IM[15]}=32'hAA0A00A2;
 			//Add $3, $5, $10
-			IM[16]=8'h8B;
-			IM[17]=8'h0A;
-			IM[18]=8'h00;
-			IM[19]=8'hA3;
+			{IM[16],IM[17],IM[18],IM[19]}=32'h8B0A00A3;
 			//Sub $4, $5, $10
-			IM[20]=8'hCB;
-			IM[21]=8'h0A;
-			IM[22]=8'h00;
-			IM[23]=8'hA4;
+			{IM[20],IM[21],IM[22],IM[23]}=32'hCB0A00A4;
 			//Store 1: Store to address 0 from $1
-			IM[24]=8'hF8;
-			IM[25]=8'h00;
-			IM[26]=8'h80;
-			IM[27]=8'h01;
+			{IM[24],IM[25],IM[26],IM[27]}=32'hF8008001;
 			//Store 2: Store to address 8 from $2
-			IM[28]=8'hF8;
-			IM[29]=8'h01;
-			IM[30]=8'h00;
-			IM[31]=8'h02;
+			{IM[28],IM[29],IM[30],IM[31]}=32'hF8010002;
 			//Store 3: Store to address 16 from $3
-			IM[32]=8'hF8;
-			IM[33]=8'h01;
-			IM[34]=8'h80;
-			IM[35]=8'h03;
+			{IM[32],IM[33],IM[34],IM[35]}=32'hF8018003;
 			//Store 4: Store to address 32 from $4
-			IM[36]=8'hF8;
-			IM[37]=8'h02;
-			IM[38]=8'h00;
-			IM[39]=8'h04;
+			{IM[36],IM[37],IM[38],IM[39]}=32'hF8020004;
 		end
 endmodule

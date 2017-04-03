@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Workstation/CECS-341/Lab6-IntegrationOfPCIMIDandRFALUDMRF/Top5C.v";
+static const char *ng0 = "D:/Workspace/CECS-341/Lab6-IntegrationOfPCIMIDandRFALUDMRF/Top5C.v";
 
 
 
