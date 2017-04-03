@@ -2,9 +2,9 @@ Command line:
    Top5C_Tester_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54058
+     -socket  54535
 
-Sun Apr 02 18:11:34 2017
+Sun Apr 02 19:52:08 2017
 
 
  Elaboration Time: 0.0468 sec
@@ -20,9 +20,9 @@ Sun Apr 02 18:11:34 2017
  Total Traceable Variables  : 29
  Total Scalar Nets and Variables : 2209
 
- Total Simulation Time: 0.0468 sec
+ Total Simulation Time: 0.0624 sec
 
- Current Memory Usage: 824.762 Meg
+ Current Memory Usage: 667.476 Meg
 
-Sun Apr 02 18:13:30 2017
+Sun Apr 02 20:02:24 2017
 
