@@ -34,32 +34,9 @@ module DataMemory(Address, WriteData, MemRead, MemWrite, clock, ReadData);
 	//Give memory some values
 	initial
 		begin
-			DM[0]=8'h00; //beginning of 0th double word
-			DM[1]=8'h00;
-			DM[2]=8'h00;
-			DM[3]=8'h00;
-			DM[4]=8'h00;
-			DM[5]=8'h00;
-			DM[6]=8'h00;
-			DM[7]=8'h00;
+			{DM[16],DM[17],DM[18],DM[19],DM[20],DM[21],DM[22],DM[23]}=64'h2;
 			//.....
-			DM[40]=8'h55; //beginning of 5th double word
-			DM[41]=8'h55;
-			DM[42]=8'h55;
-			DM[43]=8'h55;
-			DM[44]=8'h55;
-			DM[45]=8'h55;
-			DM[46]=8'h55;
-			DM[47]=8'h55;
-			//.....
-			DM[80]=8'haa; //beginning of 10th double word
-			DM[81]=8'haa;
-			DM[82]=8'haa;
-			DM[83]=8'haa;
-			DM[84]=8'haa;
-			DM[85]=8'haa;
-			DM[86]=8'haa;
-			DM[87]=8'haa;
+			{DM[24],DM[25],DM[26],DM[27],DM[28],DM[29],DM[30],DM[31]}=64'h3;
 			//.....	
 		end
 endmodule

@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\Workstation\CECS-341\Lab5C-PCIMID\Top5C_Tester_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Workstation/CECS-341/Lab5C-PCIMID/Top5C_Tester_isim_beh.wdb 
+Running: D:\Workspace\CECS-341\Lab5C-PCIMID\Top5C_Tester_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Workspace/CECS-341/Lab5C-PCIMID/Top5C_Tester_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,10 +8,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 100 ns :  in File "D:/Workstation/CECS-341/Lab5C-PCIMID/Top5C_Tester.v" Line 120 
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 100 ns :  in File "D:/Workstation/CECS-341/Lab5C-PCIMID/Top5C_Tester.v" Line 120 
+Stopped at time : 100 ns :  in File "D:/Workspace/CECS-341/Lab5C-PCIMID/Top5C_Tester.v" Line 120 
