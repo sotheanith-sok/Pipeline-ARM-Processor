@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Workspace/CECS-341/Lab7-BranchSupport/SE_Tester_isim_beh.exe" -prj "D:/Workspace/CECS-341/Lab7-BranchSupport/SE_Tester_beh.prj" "work.SE_Tester" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester_isim_beh.exe" -prj "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester_beh.prj" "work.Top7_Tester" "work.glbl" 
