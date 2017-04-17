@@ -68,10 +68,33 @@ module Top6_Tester;
 		
 		//Read Instruciton 4
 		#5;
+		PCIn=AdderOut;
 		clock=1;
 		#5;
 		clock=0;
-
+		//Read Instruciton 5
+		#5;
+		PCIn=AdderOut;
+		clock=1;
+		#5;
+		clock=0;
+			//Read Instruciton 6
+		#5;
+		PCIn=AdderOut;
+		clock=1;
+		#5;
+		clock=0;
+		//Read Instruciton 7
+		#5;
+		PCIn=AdderOut;
+		clock=1;
+		#5;
+		clock=0;
+		//Read Instruciton 8
+		#5;
+		clock=1;
+		#5;
+		clock=0;
        $stop;
 
 	end

@@ -34,9 +34,9 @@ module DataMemory(Address, WriteData, MemRead, MemWrite, clock, ReadData);
 	//Give memory some values
 	initial
 		begin
-			{DM[16],DM[17],DM[18],DM[19],DM[20],DM[21],DM[22],DM[23]}=64'h2;
+			{DM[0],DM[1],DM[2],DM[3],DM[4],DM[5],DM[6],DM[7]}=64'h6666666666666666;
 			//.....
-			{DM[24],DM[25],DM[26],DM[27],DM[28],DM[29],DM[30],DM[31]}=64'h3;
+			{DM[8],DM[9],DM[10],DM[11],DM[12],DM[13],DM[14],DM[15]}=64'h9999999999999999;
 			//.....	
 		end
 endmodule

@@ -3,3 +3,4 @@ xst -intstyle ise -ifn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.xst" -ofn 
 xst -intstyle ise -ifn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.xst" -ofn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.syr" 
 xst -intstyle ise -ifn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.xst" -ofn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.syr" 
 xst -intstyle ise -ifn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.xst" -ofn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.syr" 
+xst -intstyle ise -ifn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.xst" -ofn "D:/Workspace/CECS-341/Lab7-BranchSupport/Top7.syr" 

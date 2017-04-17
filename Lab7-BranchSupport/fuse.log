@@ -34,8 +34,8 @@ Compiling module Top7
 Compiling module Top7_Tester
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
+Waiting for 2 sub-compilation(s) to finish...
 Compiled 13 Verilog Units
 Built simulation executable D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester_isim_beh.exe
-Fuse Memory Usage: 32356 KB
-Fuse CPU Usage: 499 ms
+Fuse Memory Usage: 32592 KB
+Fuse CPU Usage: 453 ms

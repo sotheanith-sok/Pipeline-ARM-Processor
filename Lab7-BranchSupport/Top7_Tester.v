@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   10:44:55 04/06/2017
+// Create Date:   14:38:23 04/17/2017
 // Design Name:   Top7
 // Module Name:   D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester.v
 // Project Name:  Lab7-BranchSupport
@@ -39,6 +39,7 @@ module Top7_Tester;
 	);
 
 	initial begin
+		// Initialize Inputs
 		PCIn = 0;
 		clock = 0;
 
@@ -69,49 +70,48 @@ module Top7_Tester;
 		clock=1;
 		#5;
 		clock=0;
-		
 		//Read Instruciton 5
 		#5;
 		PCIn=AdderOut;
 		clock=1;
 		#5;
 		clock=0;
-		
-		//Read Instruciton 6
+			//Read Instruciton 6
 		#5;
 		PCIn=AdderOut;
 		clock=1;
 		#5;
 		clock=0;
-		
 		//Read Instruciton 7
 		#5;
 		PCIn=AdderOut;
 		clock=1;
 		#5;
 		clock=0;
-		
 		//Read Instruciton 8
 		#5;
-		PCIn=AdderOut;
 		clock=1;
+		PCIn=AdderOut;
 		#5;
 		clock=0;
-		
 		//Read Instruciton 9
 		#5;
+		clock=1;
 		PCIn=AdderOut;
+		#5;
+		clock=0;
+//Read Instruciton 9
+		#5;
+		clock=1;
+		PCIn=AdderOut;
+		#5;
+		clock=0;
+		//Writing clock
+		#5;
 		clock=1;
 		#5;
 		clock=0;
-		
-		//Read Instruciton 10
-		#5;
-		PCIn=AdderOut;
-		clock=1;
-		#5;
-		clock=0;
-		$stop;
+       $stop;
 
 	end
       

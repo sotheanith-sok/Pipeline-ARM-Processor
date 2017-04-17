@@ -87,7 +87,7 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(51, ng0);
     t2 = (t0 + 4408U);
     t3 = *((char **)t2);
-    t2 = (t0 + 1688U);
+    t2 = (t0 + 1848U);
     t4 = *((char **)t2);
     xsi_vlog_unsigned_add(t5, 64, t3, 64, t4, 64);
     t2 = (t0 + 7200);

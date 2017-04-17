@@ -7,7 +7,10 @@ module ALUControl(ALUOp, Opcode, ALU_Operation);
 	
 	always @(ALUOp, Opcode)
 	begin
-		case({ALUOp, Opcode})
+		if (Opcode[10:3]==180 && ALUOp==1) begin
+			ALU_Operation<=7;	//Branch
+		end
+		else case({ALUOp, Opcode})
 			13'b10_10001010000: ALU_Operation<=0; 		//AND
 			13'b10_10101010000: ALU_Operation<=1;		//OR
 			13'b10_10001011000: ALU_Operation<=2; 		//ADD

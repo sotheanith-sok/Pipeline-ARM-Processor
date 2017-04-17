@@ -13,6 +13,6 @@ module registerfile(Read1, Read2, WriteReg, WriteData, RegWrite, clock, Data1, D
 	if (RegWrite==1) RF[WriteReg]<=WriteData;
 	
 	initial 
-		RF[0]=0;
+		RF[31]=0;
 
 endmodule

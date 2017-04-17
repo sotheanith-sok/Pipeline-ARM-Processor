@@ -11,13 +11,13 @@
          <ClosedNode>/Top7 D:|Workspace|CECS-341|Lab7-BranchSupport|Top7.v/ALU - ALUwithControl</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>DM - DataMemory (D:/Workspace/CECS-341/Lab7-BranchSupport/DataMemory.v)</SelectedItem>
+         <SelectedItem>SE - SignedExtender (D:/Workspace/CECS-341/Lab7-BranchSupport/SignedExtender.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000151000000020000000000000000000000000200000064ffffffff000000810000000300000002000001510000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>DM - DataMemory (D:/Workspace/CECS-341/Lab7-BranchSupport/DataMemory.v)</CurrentItem>
+      <CurrentItem>SE - SignedExtender (D:/Workspace/CECS-341/Lab7-BranchSupport/SignedExtender.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -74,20 +74,20 @@
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Top7 D:|Workspace|CECS-341|Lab7-BranchSupport|Top7.v/ALU - ALUwithControl</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>uut - SignedExtender (D:/Workspace/CECS-341/Lab7-BranchSupport/SignedExtender.v)</SelectedItem>
+         <SelectedItem>Top7_Tester (D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000151000000020000000000000000000000000200000064ffffffff000000810000000300000002000001510000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>uut - SignedExtender (D:/Workspace/CECS-341/Lab7-BranchSupport/SignedExtender.v)</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000165000000020000000000000000000000000200000064ffffffff000000810000000300000002000001650000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Top7_Tester (D:/Workspace/CECS-341/Lab7-BranchSupport/Top7_Tester.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

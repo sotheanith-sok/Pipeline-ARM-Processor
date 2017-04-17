@@ -44,11 +44,11 @@ module Top7(PCIn, clock, AdderOut);
 	Mux2to1 Mux3(.A(ALUtoDM), .B(DMtoMux3), .Sel(MemtoReg), .Output(Mux3Out));
 	
 	InstructionDecoder ID(.Reg2Loc(Reg2Loc), .ALUSrc(ALUSrc), .MemtoReg(MemtoReg), .RegWrite(RegWrite),
-	.MemRead(MemRead), .MemWrite(MemWrite), .Branch(Branch), .ALUOp(ALUOp), .Opcode(Instruction[31:21]));
+	.MemRead(MemRead), .MemWrite(MemWrite), .Branch(Branch), .ALUOp(ALUOp), .Instruction(Instruction));
 	
 	assign ShiftedValue=SEOut<<2;
 	
-	assign BranchAdderOut=ShiftedValue+PCOut;
+	assign BranchAdderOut=ShiftedValue+AdderOutToBranchMux;
 	
 	Mux2to1 Mux4(.A(AdderOutToBranchMux),.B(BranchAdderOut),.Sel((Branch&Zero)),.Output(AdderOut));
 	

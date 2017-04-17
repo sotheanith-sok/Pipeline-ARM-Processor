@@ -24,7 +24,8 @@
 static const char *ng0 = "D:/Workspace/CECS-341/Lab7-BranchSupport/registerfile.v";
 static int ng1[] = {1, 0};
 static int ng2[] = {0, 0, 0, 0};
-static int ng3[] = {0, 0};
+static int ng3[] = {31, 0};
+static int ng4[] = {0, 0};
 
 
 
@@ -306,7 +307,9 @@ static void Initial_15_3(char *t0)
     int t21;
     int t22;
 
-LAB0:    xsi_set_current_line(16, ng0);
+LAB0:    xsi_set_current_line(15, ng0);
+
+LAB2:    xsi_set_current_line(16, ng0);
     t1 = ((char*)((ng2)));
     t2 = (t0 + 2568);
     t5 = (t0 + 2568);
@@ -325,16 +328,44 @@ LAB0:    xsi_set_current_line(16, ng0);
     t17 = (!(t16));
     t18 = (t14 && t17);
     if (t18 == 1)
-        goto LAB2;
+        goto LAB3;
 
-LAB3:
+LAB4:    xsi_set_current_line(17, ng0);
+    t1 = ((char*)((ng2)));
+    t2 = (t0 + 2568);
+    t5 = (t0 + 2568);
+    t6 = (t5 + 72U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 2568);
+    t9 = (t8 + 64U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng4)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB5;
+
+LAB6:
 LAB1:    return;
-LAB2:    t19 = *((unsigned int *)t3);
+LAB3:    t19 = *((unsigned int *)t3);
     t20 = *((unsigned int *)t4);
     t21 = (t19 - t20);
     t22 = (t21 + 1);
     xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
-    goto LAB3;
+    goto LAB4;
+
+LAB5:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB6;
 
 }
 

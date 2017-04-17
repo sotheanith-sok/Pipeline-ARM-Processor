@@ -38,7 +38,8 @@ Compiling module Top6
 Compiling module Top6_Tester
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 15 Verilog Units
 Built simulation executable D:/Workspace/CECS-341/Lab6-IntegrationOfPCIMIDandRFALUDMRF/Top6_Tester_isim_beh.exe
-Fuse Memory Usage: 32308 KB
-Fuse CPU Usage: 515 ms
+Fuse Memory Usage: 32360 KB
+Fuse CPU Usage: 483 ms
