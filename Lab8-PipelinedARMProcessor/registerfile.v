@@ -14,7 +14,6 @@ module registerfile(Read1, Read2, WriteReg, WriteData, RegWrite, clock, Data1, D
 	
 	initial begin
 		RF[31]=0;
-		RF[0]=0;
 	end
 
 endmodule

@@ -2,15 +2,15 @@
 
 module InstructionDecoder( Reg2Loc, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp, Instruction
     );
-	input [31:0] Instruction;
+	input [10:0] Instruction;
 	output reg Reg2Loc, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
 	output reg [1:0] ALUOp;
-		always @(Instruction[31:21]) begin
-			if(Instruction[31:24]==180) begin
+		always @(Instruction) begin
+			if(Instruction[10:3]==180) begin
 				Reg2Loc<=1; ALUSrc<=0; MemtoReg<=0;
 				RegWrite<=0; MemRead<=0; MemWrite<=0; Branch<=1; ALUOp<=1;
 			end
-			else case(Instruction[31:21])
+			else case(Instruction)
 				//Load
 				11'b11111000010: begin
 				Reg2Loc<=0; ALUSrc<=1; MemtoReg<=1;
