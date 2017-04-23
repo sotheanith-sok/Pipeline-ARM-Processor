@@ -10,7 +10,7 @@ module EXMEM_PR(in, out, clock);
 		Counter=0;
 	end
 	always @(in) begin
-		if (!($isunknown(in))) begin
+		if (^in===1'bx) begin
 			@(posedge clock)begin
 				RF[Counter]=in;
 				Counter=Counter+1;

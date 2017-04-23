@@ -38,8 +38,7 @@ module Top8(PCIn, clock, AdderOut);
 	InstructionMemory IM(.Address(PCOut), .out(Instruction));
 	//Between Stage Register 1
 	IFID_PR PR1(.in({PCOut,Instruction}), .out(PR1Out), .clock(clock));
-	
-	
+		
 	//Stage2: InstructionDecoding, RegisterFetch, WriteBack
 	InstructionDecoder ID(.Reg2Loc(Reg2Loc), .ALUSrc(ALUSrc), .MemtoReg(MemtoReg), .RegWrite(RegWrite),
 	.MemRead(MemRead), .MemWrite(MemWrite), .Branch(Branch), .ALUOp(ALUOp), .Instruction(PR1Out[31:21]));
@@ -62,13 +61,14 @@ module Top8(PCIn, clock, AdderOut);
 	
 	//Stage4: MemoryRead, MemoryWrite
 	DataMemory DM(.Address(PR3Out[132:69]), .WriteData(PR3Out[68:5]), .MemRead(PR3Out[199]), .MemWrite(PR3Out[198]), .clock(clock), .ReadData(DMtoMux3));
-	Mux2to1 Mux4(.A(AdderOutToBranchMux),.B(PR3Out[197:134]),.Sel((Pr3Out[200]&Pr3Out[133])),.Output(AdderOut));
+	Mux2to1 Mux4(.A(AdderOutToBranchMux),.B(PR3Out[197:134]),.Sel((PR3Out[200]&PR3Out[133])),.Output(AdderOut));
 	//Between Stage Register 4
 	MEMWB_PR	PR4(.in({PR3Out[202],PR3Out[201],DMtoMux3, PR3Out[132:69],PR3Out[4:0]}), .out(P4Out), .clock(clock));
 
 	//Stage5: WriteBackToRegister
 	Mux2to1 Mux3(.A(PR4Out[68:5]), .B(PR4Out[132:69]), .Sel(PR4Out[134]), .Output(Mux3Out));
-	
+
+		
 
 	
 

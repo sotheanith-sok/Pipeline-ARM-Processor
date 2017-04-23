@@ -10,10 +10,10 @@ module IFID_PR(in, out, clock);
 		Counter=0;
 	end
 	always @(in) begin
-		if (!($isunknown(in))) begin
+		if (^in===1'bx) begin
+			Counter=Counter+1;
 			@(posedge clock)begin
 				RF[Counter]=in;
-				Counter=Counter+1;
 				if (Counter>31)
 					Counter=0;
 			end
