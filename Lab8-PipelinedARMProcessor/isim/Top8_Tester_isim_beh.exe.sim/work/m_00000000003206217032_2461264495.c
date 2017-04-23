@@ -136,8 +136,9 @@ static int ng111[] = {102, 0};
 static int ng112[] = {101, 0};
 static int ng113[] = {100, 0};
 static int ng114[] = {99, 0};
-static int ng115[] = {97, 0};
-static int ng116[] = {96, 0};
+static int ng115[] = {98, 0};
+static int ng116[] = {97, 0};
+static int ng117[] = {96, 0};
 
 
 
@@ -3095,7 +3096,7 @@ LAB204:    t107 = (t0 + 2248);
     t113 = (t0 + 2248);
     t114 = (t113 + 64U);
     t115 = *((char **)t114);
-    t116 = ((char*)((ng114)));
+    t116 = ((char*)((ng115)));
     xsi_vlog_generic_convert_array_indices(t108, t109, t112, t115, 2, 1, t116, 32, 1);
     t117 = (t108 + 4);
     t118 = *((unsigned int *)t117);
@@ -3114,7 +3115,7 @@ LAB206:    t128 = (t0 + 2248);
     t134 = (t0 + 2248);
     t135 = (t134 + 64U);
     t136 = *((char **)t135);
-    t137 = ((char*)((ng115)));
+    t137 = ((char*)((ng116)));
     xsi_vlog_generic_convert_array_indices(t129, t130, t133, t136, 2, 1, t137, 32, 1);
     t138 = (t129 + 4);
     t139 = *((unsigned int *)t138);
@@ -3133,7 +3134,7 @@ LAB208:    t149 = (t0 + 2248);
     t155 = (t0 + 2248);
     t156 = (t155 + 64U);
     t157 = *((char **)t156);
-    t158 = ((char*)((ng116)));
+    t158 = ((char*)((ng117)));
     xsi_vlog_generic_convert_array_indices(t150, t151, t154, t157, 2, 1, t158, 32, 1);
     t159 = (t150 + 4);
     t160 = *((unsigned int *)t159);

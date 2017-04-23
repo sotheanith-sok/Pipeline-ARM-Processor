@@ -24,7 +24,6 @@ Starting static elaboration
 WARNING:HDLCompiler:189 - "D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Top8.v" Line 45: Size mismatch in connection of port <A>. Formal port size is 64-bit while actual signal size is 5-bit.
 WARNING:HDLCompiler:189 - "D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Top8.v" Line 46: Size mismatch in connection of port <SEin>. Formal port size is 32-bit while actual signal size is 96-bit.
 WARNING:HDLCompiler:189 - "D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Top8.v" Line 63: Size mismatch in connection of port <Address>. Formal port size is 8-bit while actual signal size is 64-bit.
-WARNING:HDLCompiler:189 - "D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Top8.v" Line 66: Size mismatch in connection of port <out>. Formal port size is 135-bit while actual signal size is 1-bit.
 Completed static elaboration
 Compiling module PC
 Compiling module InstructionMemory
@@ -44,8 +43,8 @@ Compiling module Top8
 Compiling module Top8_Tester
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 3 sub-compilation(s) to finish...
 Compiled 17 Verilog Units
 Built simulation executable D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Top8_Tester_isim_beh.exe
-Fuse Memory Usage: 29432 KB
-Fuse CPU Usage: 296 ms
+Fuse Memory Usage: 29348 KB
+Fuse CPU Usage: 295 ms

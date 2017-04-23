@@ -47,7 +47,7 @@ module DataMemory(Address, WriteData, MemRead, MemWrite, clock, ReadData);
 			{DM[72],DM[73],DM[74],DM[75],DM[76],DM[77],DM[78],DM[79]}=64'h9999999999999999;
 			{DM[80],DM[81],DM[82],DM[83],DM[84],DM[85],DM[86],DM[87]}=64'haaaaaaaaaaaaaaaa;
 			{DM[88],DM[89],DM[90],DM[91],DM[92],DM[93],DM[94],DM[95]}=64'hbbbbbbbbbbbbbbbb;
-			{DM[96],DM[97],DM[99],DM[99],DM[100],DM[101],DM[102],DM[103]}=64'hcccccccccccccccc;
+			{DM[96],DM[97],DM[98],DM[99],DM[100],DM[101],DM[102],DM[103]}=64'hcccccccccccccccc;
 
 		end
 endmodule

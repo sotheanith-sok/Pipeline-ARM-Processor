@@ -141,6 +141,26 @@ module Top8_Tester;
 		clock=1;
 		#5;
 		clock=0;
+		//Writing clock
+		#5;
+		clock=1;
+		#5;
+		clock=0;
+		//Writing clock
+		#5;
+		clock=1;
+		#5;
+		clock=0;
+		//Writing clock
+		#5;
+		clock=1;
+		#5;
+		clock=0;
+		//Writing clock
+		#5;
+		clock=1;
+		#5;
+		clock=0;
        $stop;
 
 	end

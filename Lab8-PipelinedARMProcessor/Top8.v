@@ -44,14 +44,14 @@ module Top8(PCIn, clock, AdderOut);
 	.MemRead(MemRead), .MemWrite(MemWrite), .Branch(Branch), .ALUOp(ALUOp), .Instruction(PR1Out[31:21]));
 	Mux2to1 Mux1(.A(PR1Out[20:16]), .B(PR1Out[4:0]), .Sel(Reg2Loc), .Output(Mux1Out));
 	SignedExtender SE(.SEin(PR1Out), .SEout(SEOut));
-	registerfile	RF(.Read1(PR1Out[9:5]), .Read2(Mux1Out), .WriteReg(PR3Out[4:0]), .WriteData(Mux3Out), .RegWrite(PR4Out[133]),
+	registerfile	RF(.Read1(PR1Out[9:5]), .Read2(Mux1Out), .WriteReg(PR4Out[4:0]), .WriteData(Mux3Out), .RegWrite(PR4Out[134]),
 	.clock(clock), .Data1(RFtoALU), .Data2(RFtoMux2));
 	//Between Stage Register 2
-	IDEX_PR PR2(.in({Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp, PCOut, RFtoALU,RFtoMux2,SEOut,PR1Out[31:21],PR1Out[4:0]}),
+	IDEX_PR PR2(.in({Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp, PR1Out[95:32], RFtoALU,RFtoMux2,SEOut,PR1Out[31:21],PR1Out[4:0]}),
 	.out(PR2Out), .clock(clock));
 	
 	//Stage3: Execution
-	Mux2to1	Mux2(.A(PR2Out[143:80]), .B(PR2Out[79:16]), .Sel(ALUSrc), .Output(Mux2toALU));
+	Mux2to1	Mux2(.A(PR2Out[143:80]), .B(PR2Out[79:16]), .Sel(PR2Out[279]), .Output(Mux2toALU));
 	assign ShiftedValue=(PR2Out[79:16])<<2;
 	assign BranchAdderOut=ShiftedValue+AdderOutToBranchMux;
 	ALUwithControl ALU(.ALUOp(PR2Out[273:272]),.Opcode(PR2Out[15:5]), .A(PR2Out[207:144]), .B(Mux2toALU), .Zero(Zero), .ALU_Result(ALUtoDM));
@@ -63,10 +63,10 @@ module Top8(PCIn, clock, AdderOut);
 	DataMemory DM(.Address(PR3Out[132:69]), .WriteData(PR3Out[68:5]), .MemRead(PR3Out[199]), .MemWrite(PR3Out[198]), .clock(clock), .ReadData(DMtoMux3));
 	Mux2to1 Mux4(.A(AdderOutToBranchMux),.B(PR3Out[197:134]),.Sel((PR3Out[200]&PR3Out[133])),.Output(AdderOut));
 	//Between Stage Register 4
-	MEMWB_PR	PR4(.in({PR3Out[202],PR3Out[201],DMtoMux3, PR3Out[132:69],PR3Out[4:0]}), .out(P4Out), .clock(clock));
+	MEMWB_PR	PR4(.in({PR3Out[202],PR3Out[201],DMtoMux3, PR3Out[132:69],PR3Out[4:0]}), .out(PR4Out), .clock(clock));
 
 	//Stage5: WriteBackToRegister
-	Mux2to1 Mux3(.A(PR4Out[68:5]), .B(PR4Out[132:69]), .Sel(PR4Out[134]), .Output(Mux3Out));
+	Mux2to1 Mux3(.A(PR4Out[68:5]), .B(PR4Out[132:69]), .Sel(PR4Out[133]), .Output(Mux3Out));
 
 		
 

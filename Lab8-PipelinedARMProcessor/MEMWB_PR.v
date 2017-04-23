@@ -9,16 +9,14 @@ module MEMWB_PR(in, out, clock);
 	initial begin
 		Counter=0;
 	end
+	assign out=RF[Counter-1];
 	always @(in) begin
-		if (^in===1'bx) begin
 			@(posedge clock)begin
 				RF[Counter]=in;
 				Counter=Counter+1;
 				if (Counter>31)
 					Counter=0;
 			end
-		end
 	end		
-	assign out=RF[Counter];
 
 endmodule
