@@ -11,13 +11,13 @@
          <ClosedNode>/Top8 D:|Workstation|CECS-341|Lab8-PipelinedARMProcessor|Top8.v/ALU - ALUwithControl</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Mux2 - Mux2to1 (D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Mux2to1.v)</SelectedItem>
+         <SelectedItem>Top8 (D:/Workspace/CECS-341/Lab8-PipelinedARMProcessor/Top8.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000152000000020000000000000000000000000200000064ffffffff000000810000000300000002000001520000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000151000000020000000000000000000000000200000064ffffffff000000810000000300000002000001510000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Mux2 - Mux2to1 (D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/Mux2to1.v)</CurrentItem>
+      <CurrentItem>Top8 (D:/Workspace/CECS-341/Lab8-PipelinedARMProcessor/Top8.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -25,13 +25,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000196000000010000000100000000000000000000000064ffffffff000000810000000000000001000001960000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -40,7 +40,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003a3000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002e3000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002170000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ALUControl.v</CurrentItem>
    </ItemView>
@@ -81,16 +81,17 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/SE_Tester D:|Workstation|CECS-341|Lab8-PipelinedARMProcessor|SE_Tester.v</ClosedNode>
          <ClosedNode>/Top8 D:|Workstation|CECS-341|Lab8-PipelinedARMProcessor|Top8.v</ClosedNode>
+         <ClosedNode>/Top8_Tester D:|Workspace|CECS-341|Lab8-PipelinedARMProcessor|Top8_Tester.v/uut - Top8/ALU - ALUwithControl</ClosedNode>
          <ClosedNode>/Top8_Tester D:|Workstation|CECS-341|Lab8-PipelinedARMProcessor|Top8_Tester.v/uut - Top8/ALU - ALUwithControl</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>PR1 - IFID_PR (D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/IFID_PR.v)</SelectedItem>
+         <SelectedItem>IM - InstructionMemory (D:/Workspace/CECS-341/Lab8-PipelinedARMProcessor/InstructionMemory.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000166000000020000000000000000000000000200000064ffffffff000000810000000300000002000001660000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000165000000020000000000000000000000000200000064ffffffff000000810000000300000002000001650000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>PR1 - IFID_PR (D:/Workstation/CECS-341/Lab8-PipelinedARMProcessor/IFID_PR.v)</CurrentItem>
+      <CurrentItem>IM - InstructionMemory (D:/Workspace/CECS-341/Lab8-PipelinedARMProcessor/InstructionMemory.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -111,12 +112,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
 </Project>
