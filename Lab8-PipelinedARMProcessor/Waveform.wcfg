@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="42" />
+   <WVObjectSize size="47" />
    <wvobject fp_name="/Top8_Tester/AdderOut" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">AdderOut[63:0]</obj_property>
       <obj_property name="ObjectShortName">AdderOut[63:0]</obj_property>
@@ -1575,6 +1575,16 @@
          <obj_property name="ObjectShortName">out[0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="/Top8_Tester/uut/RF/Read1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Read1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Read1[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top8_Tester/uut/RF/Read2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Read2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Read2[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="divider370" type="divider">
       <obj_property name="label">PR2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -1634,7 +1644,7 @@
    <wvobject fp_name="vbus1268" type="vbus" db_ref_id="1">
       <obj_property name="label">PC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <wvobject fp_name="/Top8_Tester/uut/PR2/out[271]" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">[271]</obj_property>
          <obj_property name="ObjectShortName">out[271]</obj_property>
@@ -2749,6 +2759,21 @@
          <obj_property name="ObjectShortName">out[0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="/Top8_Tester/uut/ALU/A" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A[63:0]</obj_property>
+      <obj_property name="ObjectShortName">A[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top8_Tester/uut/ALU/B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">B[63:0]</obj_property>
+      <obj_property name="ObjectShortName">B[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top8_Tester/uut/ALU/ALU_Result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_Result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_Result[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="divider371" type="divider">
       <obj_property name="label">PR3</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -3077,7 +3102,7 @@
    <wvobject fp_name="vbus1618" type="vbus" db_ref_id="1">
       <obj_property name="label">ALU_Result</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <wvobject fp_name="/Top8_Tester/uut/PR3/out[132]" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">[132]</obj_property>
          <obj_property name="ObjectShortName">out[132]</obj_property>
@@ -3656,7 +3681,7 @@
    <wvobject fp_name="vbus1899" type="vbus" db_ref_id="1">
       <obj_property name="label">ALU_Result</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <wvobject fp_name="/Top8_Tester/uut/PR4/out[68]" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">[68]</obj_property>
          <obj_property name="ObjectShortName">out[68]</obj_property>
