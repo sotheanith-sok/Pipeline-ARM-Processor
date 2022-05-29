@@ -7,7 +7,7 @@ A semester-long design of pipeline arm processer using RISC instruction set.
  - [Verilog](https://www.xilinx.com/)
 
 ## Authors
- - [Sotheanith Sok](https://github.com/sotheanith)
+ - [Sotheanith Sok](https://github.com/sotheanith-sok)
 
 ## Course
  - [CECS 341 - Computer Architecture and Organization](http://catalog.csulb.edu/preview_course_nopop.php?catoid=5&coid=39992)
